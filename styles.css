@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #fff;
+    --lesslight: #efefef;
+    --dark: #404040;
+    --moredark: #000;
+    --link: royalblue;
+    line-height: 1.75em;
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+h1 {
+    line-height: 1em;
+}
+
+.page-anchor {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #444;
+    margin: 20px 0;
+}
+
+button, input {
+    font-size: 1em; /* Override browser default font shrinking*/
+}
+
+input {
+    border: 1px solid var(--dark);
+    background-color: var(--lesslight);
+    border-radius: .25em;
+    padding: .5em;
+}
+
+pre {
+    background-color: var(--lesslight);
+    margin: 0.5em 0 0.5em 0;
+    padding: 0.5em;
+    overflow: auto;
+}
+
+code {
+    background-color: var(--lesslight);
+}
+
+body {
+    background-color: var(--light);
+    margin: 0;
+    max-width: 900px;
+    padding: 0 20px 20px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    outline: none;
+    color: rgb(99, 131, 227);
+}
+
+a:hover {
+    text-decoration-color: var(--link);
+}
+
+button, .button, input[type=submit] {
+    display: inline-block;
+    background-color: #555;
+    color: #eee;
+    text-align: center;
+    border-radius: .25em;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover, .button:hover, input[type=submit]:hover {
+    background-color: #666;
+}
+
+/* Add a margin between side-by-side buttons */
+button + button, .button + .button, input[type=submit] + input[type=submit] {
+    margin-left: 1em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.bordered {
+    border: 3px solid;
+}
+
+.home {
+    display: inline-block;
+    background-color: var(--dark);
+    color: var(--light);
+    margin-top: 20px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Desktop sizes */
+@media (min-width: 600px) {
+    ol.twocol {
+        column-count: 2;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Make everything in a row a column */
+    .row > * {
+        display: block;
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .row > *:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+/* Dark mode overrides (confusingly inverse) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light: #222;
+        --lesslight: #333;
+        --dark: #eee;
+        --moredark: #fefefe;
+    }
+    /* This fixes an odd blue then white shadow on FF in dark mode */
+    *:focus {
+        outline: var(--light);
+        box-shadow: 0 0 0 .25em var(--link);
+    }
+}
+
+/* Printing */
+@media print {
+    .home {
+        display: none;
+    }
+}
+
+/* New custom ones */
+img {
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
