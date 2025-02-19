@@ -1,14 +1,115 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>b(attle)log</title>
-</head>
-<body>
-    <a href="#1" class="page-anchor">1</a><h1>b(attle) log: start</h1>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>b(attle)log</title>
+    </head>
+    <body>
+        <a href="#2" class="page-anchor">2</a><div class="date">Updated: 2025-02-18</div><h1>brief writeup of the initial mons</h1>
+
+<p>Okay, let's talk specifics of some of the various mons and how I see them playing out. Reminder that monchain is supposed to play a lot like Pokemon, rewarding taking risks at the right time, as well as predictions. </p>
+
+<h2>Sofabbi</h2>
+
+<p><img src="./assets/sofabbi_front.gif" class="sprite-img">
+<img src="./assets/sofabbi_back.gif" class="sprite-img">
+<img src="./assets/sofabbi_mini.gif" class="mini-img"></p>
+
+<p>This one was pretty easy to find a theme. It's the RNG mon, based off the gacha wheel found in Sofamon. Play stayle is a safe-ish pivot that can soak up damage and pull off occasional clip-worthy knockouts.</p>
+
+<p>Stat spread: overall middling in everything. Balanced attack/defense, slightly higher HP than usual, slightly lower speed than usual.</p>
+
+<p><strong>Ability: Spin The Wheel</strong></p>
+
+<p>Every move has a 33% chance of refunding 1 stamina.</p>
+
+<p><strong>Moves</strong></p>
+
+<ul>
+<li>RNG damage move, 3 stamina, some spread of RNG damage, maybe 10/20/40/80/160/320, could also have a few other amusing effects (eg literally RNG, could be a status move, instant kill, or even damaging yourself, this feels the most fun)</li>
+<li>Normal damage, 2 stamina.</li>
+<li>Normal damage, 2 stamina, maybe some % to inflict status.</li>
+<li>Heal (need to cap this somehow) by consuming all available stamina, heal by % equal to the amount of stamina needed.</li>
+</ul>
+
+<p>Rough philosophy is to have Sofabbi run at a slightly more efficient stamina economy, and the final heal move lets it benefit from that more than another mon. Main balancing question is probably needing to make its average moveset energy costs higher to offset.</p>
+
+<h2>Inutia</h2>
+
+<p><img src="./assets/inutia_front.gif" class="sprite-img">
+<img src="./assets/inutia_back.gif" class="sprite-img">
+<img src="./assets/inutia_mini.gif" class="mini-img"></p>
+
+<p>Inutia borrows from Initia (hi Jennie). So we wanna lean into making it relatively nimble, but probably not very strong to balance it.</p>
+
+<p>Stat spread: higher than average speed, lower than average on other areas. (Sort of glass cannon, except more like utility mon. Good suicide lead.)</p>
+
+<p><strong>Ability: need name</strong></p>
+
+<p>Something to benefit from swapping in and out, e.g. inflict a minor status debuff on the opponent when swapped in.</p>
+
+<p><strong>Moves</strong></p>
+
+<ul>
+<li>Damage + swap, 1 stamina (?), allows you to hit, then swap out to another mon (maybe some slight buff?), very low damage, moreso for the swap.</li>
+<li>Stage hazard + team buff (but limited uses), 4 stamina, deals damage to opponent on swap in, heals your team on swap in.</li>
+<li>Damage placeholder</li>
+<li>Damage placeholder</li>
+</ul>
+
+<p>Is hazards + swap too strong of a combo? Maybe if it's predictable there should be some counterplay, will need to monitor in prod.</p>
+
+<h2>Ghouliath</h2>
+
+<p><img src="./assets/ghouliath_front.gif" class="sprite-img">
+<img src="./assets/ghouliath_back.gif" class="sprite-img">
+<img src="./assets/ghouliath_mini.gif" class="mini-img"></p>
+
+<p>Man oh man. The ghouls. Ghouliath is also designed to be a weird tricky attacker. Mostly there to weather/tank hits that you can't deal with otherwise.</p>
+
+<p>Stat spread: average stats, maybe slightly higher than average attack.</p>
+
+<p><strong>Ability: Rise From The Grave</strong></p>
+
+<p>An example of one of the cool things we can do w/ programmable mons. Once per game, if Ghouliath dies, it revives after 3 turns, with 1 HP. (Not sure if 1 HP debuff is needed to balance it out, as it effectively behaves like Disguise on Mimikyu and other free-turn moves, could also balance it out with lower stats, but we'll see)</p>
+
+<p><strong>Moves</strong></p>
+
+<ul>
+<li>spook on opponent + damage, 2 stamina, -1 priority (probably)</li>
+<li>damage, 0 stamina (1 stamina?), inflicts spook on self (interesting way to bypass energy economy, but self-spook probably needs a way to handle it more elegantly, but it's flavorful)</li>
+<li>some sort of perish song variant, eg both mons die in 3 turns unless they swap out (probably need to balance this as well somehow)</li>
+<li>damage placeholder</li>
+</ul>
+
+<h2>Pengym</h2>
+
+<p><img src="./assets/pengym_front.gif" class="sprite-img">
+<img src="./assets/pengym_back.gif" class="sprite-img">
+<img src="./assets/pengym_mini.gif" class="mini-img"></p>
+
+<p>It's a cute penguin. This and Gorillax are supposed to be easier to think about.</p>
+
+<p>Stat spread: speedier/attack up, lower defenses.</p>
+
+<p><strong>Ability: idk yet</strong></p>
+
+<p>maybe something that rewards staying in / attacking which newer players will gravitate towards.</p>
+
+<p><strong>Moves</strong></p>
+
+<ul>
+<li>Damage + % to inflict frostbite,</li>
+<li>Big damage, but only if opponent is frostbitten</li>
+<li>Stat boost</li>
+<li>Damage placeholder</li>
+</ul>
+
+<p>idk, need some boring/normal mons, need to think a bit more flavorfully, maybe something that incorporates the little pengus as well.</p>
+<a href="#1" class="page-anchor">1</a><div class="date">Updated: 2025-02-18</div><h1>b(attle) log: start</h1>
 
 <p>Okay so this is supposed to be a dev diary of sorts for monchain. Will do a longer write-up in the future for interested parties. Mostly am thinking about fleshing out the battle mechanics so people can try it out more at Denver. Also thinking about the prediction market / betting mechanisms. Noticed some small width issues when testing / copy-paste today so have to go fix those. Also paying attention to layouts / art inspiration from earlier 1980's style anime, as well as more recent gacha games. Will add some images and moodboard stuff later.</p>
 
@@ -20,5 +121,6 @@
 
 <p>End goal is still a cool enough game that can rope in communities. Everything else is in service of that for now.</p>
 
-</body>
-</html>
+    </body>
+    </html>
+    

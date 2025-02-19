@@ -3,10 +3,10 @@
 }
 
 :root {
-    --light: #fff;
-    --lesslight: #efefef;
-    --dark: #404040;
-    --moredark: #000;
+    --light: #121212;
+    --lesslight: #333;
+    --dark: #efefef;
+    --moredark: #fefefe;
     --link: royalblue;
     line-height: 1.75em;
     font-family: system-ui, sans-serif;
@@ -14,13 +14,21 @@
     color: var(--dark);
 }
 
-h1 {
+h1, h2 {
     line-height: 1em;
+    color: #b1dbc4;
 }
 
 .page-anchor {
     font-size: 1.5em;
     font-weight: bolder;
+    color: #439e6c;
+}
+
+.date {
+    font-size: 0.75em;
+    line-height: 150%;
+    font-family: monospace;
 }
 
 hr {
@@ -138,21 +146,6 @@ button + button, .button + .button, input[type=submit] + input[type=submit] {
     }
 }
 
-/* Dark mode overrides (confusingly inverse) */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light: #222;
-        --lesslight: #333;
-        --dark: #eee;
-        --moredark: #fefefe;
-    }
-    /* This fixes an odd blue then white shadow on FF in dark mode */
-    *:focus {
-        outline: var(--light);
-        box-shadow: 0 0 0 .25em var(--link);
-    }
-}
-
 /* Printing */
 @media print {
     .home {
@@ -161,9 +154,18 @@ button + button, .button + .button, input[type=submit] + input[type=submit] {
 }
 
 /* New custom ones */
-img {
+.sprite-img {
+    width: 192px;
+    height: 192px;
+    image-rendering: pixelated;
+    object-fit: contain;
+    padding-right: 16px;
+}
+
+.mini-img {
     width: 96px;
     height: 96px;
     image-rendering: pixelated;
     object-fit: contain;
+    padding-right: 16px;
 }
