@@ -169,3 +169,8 @@ button + button, .button + .button, input[type=submit] + input[type=submit] {
     object-fit: contain;
     padding-right: 16px;
 }
+
+img {
+    max-width: 900px;
+    margin: auto;
+}
