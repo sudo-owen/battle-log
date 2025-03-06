@@ -52,7 +52,7 @@ def parse_all():
     for i in range(num_files, 0, -1):
         file_path = f"contents/{i}.md"
         # Add a custom anchor
-        output += f'<a href="#{i}" class="page-anchor">{i}</a>'
+        output += f'<a href="#{i}" class="page-anchor" name="{i}">{i}</a>'
         # Add last modified date
         modified_date = datetime.fromtimestamp(os.path.getmtime(file_path)).date()
         output += f'<div class="date">Updated: {modified_date}</div>'
