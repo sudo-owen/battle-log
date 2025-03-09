@@ -154,12 +154,16 @@ button + button, .button + .button, input[type=submit] + input[type=submit] {
 }
 
 /* New custom ones */
+.sprite-img, .mini-img {
+    background-color: hsl(217, 54%, 36%);
+}
 .sprite-img {
     width: 192px;
     height: 192px;
     image-rendering: pixelated;
     object-fit: contain;
     padding-right: 16px;
+
 }
 
 .mini-img {
